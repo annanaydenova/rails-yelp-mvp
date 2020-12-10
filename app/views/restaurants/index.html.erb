@@ -4,7 +4,7 @@
   <% @restaurants.each do |restaurant| %>
     <li style = "text-decoration: none">
       <%= link_to restaurant.name, restaurant_path(restaurant.id)%>
-      <%= link_to restaurant_path(restaurant.id), method: :delete, data: { confirm: "Delete #{restaurant.title}?" } do %>
+      <%= link_to restaurant_path(restaurant.id), method: :delete, data: { confirm: "Delete #{restaurant.name}?" } do %>
         <i class="fa fa-trash-o" aria-hidden="true"></i>
       <% end %>
     </li>
